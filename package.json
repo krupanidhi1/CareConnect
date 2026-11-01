@@ -1,0 +1,35 @@
+{
+  "name": "careconnect-fsd-final",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CareConnect \u2014 Full Stack Development project (React frontend + Express/MongoDB backend).",
+  "scripts": {
+    "test": "jest --runInBand --forceExit",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.1.6",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "forceExit": true,
+    "detectOpenHandles": false
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
